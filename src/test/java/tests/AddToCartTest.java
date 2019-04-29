@@ -20,6 +20,7 @@ public class AddToCartTest extends EnvironmentSetup {
         String category="Clothing";
         String userName="spree@example.com";
         String passWord="spree123";
+
         ShopingCartPage shopingcartpage=loginpage.login(userName,passWord).selectProduct(product,category).addTocart();
         Assert.assertTrue(shopingcartpage.isProductInCart(product), "Element Not present");
 
@@ -27,12 +28,23 @@ public class AddToCartTest extends EnvironmentSetup {
 
     }
 
-
     @Test(groups = "smoke")
-    public void testGroupstag() {
-        System.out.println("Tetsing groups tag from Add to cart");
+    public void addtoCartWithOutLogin() {
+
+        ProductListingPage productlistingpage=new ProductListingPage(driver);
+        String product = "Ruby on Rails Ringer T-Shirt";
+        String category="Clothing";
+        String userName="spree@example.com";
+        String passWord="spree123";
+
+        ShopingCartPage shopingcartpage=productlistingpage.selectProduct(product,category).addTocart();
+        Assert.assertTrue(shopingcartpage.isProductInCart(product), "Element Not present");
+
 
 
     }
+
+
+
 }
 

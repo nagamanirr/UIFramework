@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import tests.EnvironmentSetup;
 
-public class LoginPage extends EnvironmentSetup {
+public class LoginPage {
 
     WebDriver driver;
     public LoginPage(WebDriver driver)
