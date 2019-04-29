@@ -13,10 +13,10 @@ public class AddToCartPage {
     }
 
 
-    public void addProductTocart() {
+    public ShopingCartPage addTocart() {
 
         driver.findElement(By.id("add-to-cart-button")).click();
 
-
+return new ShopingCartPage(driver);
     }
 }
