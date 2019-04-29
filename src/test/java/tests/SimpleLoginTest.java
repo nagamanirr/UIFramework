@@ -15,33 +15,30 @@ import java.util.concurrent.TimeUnit;
 public class SimpleLoginTest extends EnvironmentSetup{
 
 
-    @Test
+    @Test(groups ="smoke")
     public void testLogin(){
 
-        driver.findElement(By.name("commit")).click();
+        //driver.findElement(By.name("commit")).click();
         String logouttext=driver.findElement(By.linkText("Logout")).getText();
         System.out.println(logouttext);
         Assert.assertEquals("Logout",logouttext);
 
     }
+     @Test(groups ="smoke")
+    public void testGroupstag()
+     {
 
+         System.out.println("Testing Groups tag Sample Login Test");
 
-    @Test
-    public void addtoCart(){
+     }
 
-        driver.findElement(By.linkText("Clothing")).click();
-        driver.findElement(By.linkText("Ruby on Rails Ringer T-Shirt")).click();
+       @Test
+      public void testNotGroupstag() {
 
+           System.out.println("Testing NOt Groups tag Sample Login Test");
+       }
 
-        String logouttext=driver.findElement(By.linkText("Logout")).getText();
-        System.out.println(logouttext);
-        Assert.assertEquals("Logout",logouttext);
-
-    }
-
-
-
-//
+//     }
 //    @AfterTest
 //public void tearDown()
 //{
