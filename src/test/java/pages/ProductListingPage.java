@@ -17,8 +17,8 @@ public class ProductListingPage {
 
 
 
-    public void ListTheProduct(String searchProduct ) {
-        driver.findElement(By.linkText("Clothing")).click();
+    public void listTheProduct(String searchProduct,String Category ) {
+        driver.findElement(By.linkText(Category)).click();
         driver.findElement(By.linkText(searchProduct)).click();
        // driver.findElement(By.id(searchProduct)).click();
         //driver.findElement(By.id("add-to-cart-button")).click();

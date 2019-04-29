@@ -18,8 +18,9 @@ public class AddToCartTest extends EnvironmentSetup {
         loginPage.login("spree@example.com", "spree123");
 
         String product = "Ruby on Rails Ringer T-Shirt";
+        String category="Clothing";
         ProductListingPage prpage = new ProductListingPage(driver);
-        prpage.ListTheProduct(product);
+        prpage.listTheProduct(product,category);
         AddToCartPage productdesc=new AddToCartPage(driver);
         productdesc.addProductTocart();
         ShopingCartPage shopingcartpage = new ShopingCartPage(driver);
