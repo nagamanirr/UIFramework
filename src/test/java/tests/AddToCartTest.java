@@ -1,21 +1,14 @@
 package tests;
 
-import java.util.*;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import pages.AddToCartPage;
 import pages.LoginPage;
+import pages.ProductListingPage;
+import pages.ShopingCartPage;
 
-import java.util.concurrent.TimeUnit;
 
-
-public class AddToCart extends EnvironmentSetup {
+public class AddToCartTest extends EnvironmentSetup {
 
 
     @Test(groups = "smoke")
