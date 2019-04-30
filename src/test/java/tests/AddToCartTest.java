@@ -12,7 +12,7 @@ import pages.ShopingCartPage;
 public class AddToCartTest extends EnvironmentSetup {
 
 
-    @Test(dataProvider = "GetProductandcaterory")
+    @Test(dataProvider = "GetProductandcategory")
     public void addtoCart(String product,String category) {
 
         LoginPage loginpage = new LoginPage(driver);
@@ -25,7 +25,7 @@ public class AddToCartTest extends EnvironmentSetup {
 
     }
 
-    @DataProvider(name="GetProductandcaterory")
+    @DataProvider(name="GetProductandcategory")
 public Object[][] getgetProductandcaterory(){
 
    return new Object[][]
