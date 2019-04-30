@@ -16,12 +16,8 @@ public class AddToCartTest extends EnvironmentSetup {
     public void addtoCart(String product,String category) {
 
         LoginPage loginpage = new LoginPage(driver);
-        //loginpage.login("spree@example.com", "spree123");
-        //String product = "Ruby on Rails Ringer T-Shirt";
-       // String category="Clothing";
         String userName="spree@example.com";
         String passWord="spree123";
-
         ShopingCartPage shopingcartpage=loginpage.login(userName,passWord).selectProduct(product,category).addTocart();
         Assert.assertTrue(shopingcartpage.isProductInCart(product), "Element Not present");
 
