@@ -33,7 +33,7 @@ public class EnvironmentSetup {
   }
 
 */
-    @BeforeTest(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     public void setUp()
     {
 

@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.AddToCartPage;
 import pages.LoginPage;
@@ -11,13 +12,13 @@ import pages.ShopingCartPage;
 public class AddToCartTest extends EnvironmentSetup {
 
 
-    @Test(groups = "smoke")
-    public void addtoCart() {
+    @Test(dataProvider = "GetProductandcaterory")
+    public void addtoCart(String product,String category) {
 
         LoginPage loginpage = new LoginPage(driver);
         //loginpage.login("spree@example.com", "spree123");
-        String product = "Ruby on Rails Ringer T-Shirt";
-        String category="Clothing";
+        //String product = "Ruby on Rails Ringer T-Shirt";
+       // String category="Clothing";
         String userName="spree@example.com";
         String passWord="spree123";
 
@@ -28,6 +29,27 @@ public class AddToCartTest extends EnvironmentSetup {
 
     }
 
+    @DataProvider(name="GetProductandcaterory")
+public Object[][] getgetProductandcaterory(){
+
+   return new Object[][]
+
+
+        {
+
+            {"Spree Stein","Mugs"},
+                {"Ruby on Rails Ringer T-Shirt","Clothing"},
+
+        };
+
+    }
+
+
+
+
+
+
+/*
     @Test(groups = "smoke")
     public void addtoCartWithOutLogin() {
 
@@ -44,7 +66,7 @@ public class AddToCartTest extends EnvironmentSetup {
 
     }
 
-
+*/
 
 }
 

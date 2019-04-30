@@ -29,11 +29,11 @@ public class ShopingCartPage {
             String ExtractedProductDetails = listofItems.get(i).getText();
 
             if (ExtractedProductDetails.contains(searchProduct)) {
-                System.out.println("element present");
+                //System.out.println("element present");
                 success=true;
 
             } else {
-                System.out.println("Element not present");
+                //System.out.println("Element not present");
                 success=false;
 
             }
