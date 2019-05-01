@@ -9,8 +9,8 @@
         </groups>
 
         <classes>
-            <class name="tests.SimpleLoginTest" />
-            <class name="tests.AddToCart" />
+
+            <class name="tests.AddToCartTest" />
 
         </classes>
 

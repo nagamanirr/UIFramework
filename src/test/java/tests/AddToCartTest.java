@@ -7,6 +7,7 @@ import pages.AddToCartPage;
 import pages.LoginPage;
 import pages.ProductListingPage;
 import pages.ShopingCartPage;
+import utils.ConfigPropertiesUtil;
 
 
 public class AddToCartTest extends EnvironmentSetup {
@@ -16,8 +17,10 @@ public class AddToCartTest extends EnvironmentSetup {
     public void addtoCart(String product,String category) {
 
         LoginPage loginpage = new LoginPage(driver);
-        String userName="spree@example.com";
-        String passWord="spree123";
+        //String userName="spree@example.com";
+        //String passWord="spree123";
+        String userName=ConfigPropertiesUtil.getProperties().getProperty("UserId");
+        String passWord = ConfigPropertiesUtil.getProperties().getProperty("PassWord");
         ShopingCartPage shopingcartpage=loginpage.login(userName,passWord).selectProduct(product,category).addTocart();
         Assert.assertTrue(shopingcartpage.isProductInCart(product), "Element Not present");
 
